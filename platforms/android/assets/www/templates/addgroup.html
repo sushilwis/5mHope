@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<ion-view view-title="My Groups" >
+  <ion-nav-title style="color:white;">
+      Add Group
+    </ion-nav-title>
+  <ion-content >
+
+    <div class="col-xs-12 col-sm-12" style="margin-top:30px">
+
+    <form action="/action_page.php" >
+        <div class="form-group">
+        <label for="text">Group Name</label>
+        <input type="text" class="form-control"  placeholder="Group Name" ng-model="val.groupname">
+        </div>
+        <div class="form-group">
+        <label for="text">Zip Code</label>
+        <input type="text" class="form-control"  placeholder="Zip Code" ng-model="val.zipcode"  onkeyup=""show(val.zipcode)">
+        </div>
+      <div class="form-group">
+        <label for="text">City</label>
+        <input type="text" class="form-control"  placeholder="City" ng-model="val.city">
+      </div>
+      <div class="form-group">
+        <label for="text">State</label>
+        <input type="text" class="form-control"  placeholder="State" ng-model="val.state">
+      </div>
+      <div class="form-group">
+        <label for="text">Country</label>
+        <input type="text" class="form-control"  placeholder="Country" ng-model="val.country">
+      </div>
+        <div class="form-group" ng-show="loc">
+        <label for="text">City : {{city}}</label>
+        <label for="text">State : {{state}}</label>
+        <label for="text">Country : {{country}}</label>
+        </div>
+
+        <div class="col-xs-6">
+        <input type="button" class="form-control sub text-default" id="pwd" value="Cancel" ng-click="cancel()">
+        </div>
+        <div class="col-xs-6">
+        <input type="button" class=" disabled form-control sub " id="pwd" value="Submit" ng-click="addgroup()">
+        </div>
+      </form>
+    </div>
+
+  </ion-content>
+</ion-view>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+        "spec": "git+https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:an-rahulpandey/cordova-plugin-mediapicker.git",
+          "sshUrl": "git+ssh://git@github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+          "httpsUrl": "git+https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+          "gitUrl": "git://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+          "shortcut": "github:an-rahulpandey/cordova-plugin-mediapicker",
+          "directUrl": "https://raw.githubusercontent.com/an-rahulpandey/cordova-plugin-mediapicker/master/package.json"
+        }
+      },
+      "/Users/jasti/Downloads/5mHope"
+    ]
+  ],
+  "_from": "git+https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+  "_id": "cordova-plugin-mediapicker@1.0.2",
+  "_inCache": true,
+  "_location": "/cordova-plugin-mediapicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+    "spec": "git+https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:an-rahulpandey/cordova-plugin-mediapicker.git",
+      "sshUrl": "git+ssh://git@github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+      "httpsUrl": "git+https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+      "gitUrl": "git://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+      "shortcut": "github:an-rahulpandey/cordova-plugin-mediapicker",
+      "directUrl": "https://raw.githubusercontent.com/an-rahulpandey/cordova-plugin-mediapicker/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git#31e51a6a1384c82d30e2cf6b8b1ec78f9749eb5e",
+  "_shasum": "b16525b675e03c8300fd0b421219a295e116dc3d",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git",
+  "_where": "/Users/jasti/Downloads/5mHope",
+  "author": {
+    "name": "Rahul Pandey"
+  },
+  "bugs": {
+    "url": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-mediapicker",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova/Phonegap plugin to select songs or audio files from iTunes Library",
+  "devDependencies": {},
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "gitHead": "31e51a6a1384c82d30e2cf6b8b1ec78f9749eb5e",
+  "homepage": "https://github.com/an-rahulpandey/cordova-plugin-mediapicker",
+  "keywords": [
+    "ios audio picker",
+    "ios media picker",
+    "media picker",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "audio picker"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-mediapicker",
+  "optionalDependencies": {},
+  "readme": "\n# Description\n\nThe plugin allows you to select the song from iOS music library and copy it in your app Document directory. Then you can use the [cordova media plugin](https://github.com/apache/cordova-plugin-media) to play the song. Check the demo on how to play a song via media plugin.\n\n### Installation\n\n    cordova plugin add https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git\n\n### Methods & Usage\n\n- **To select the song from music library**\n\n\n````\nwindow.plugins.mediapicker.getAudio(success,error,multiple,icloud,title);\n````\n\n  success - will be called when the user has done selecting the songs. You can get the array of songs list using this\n````javascript\n    function success(data)\n    {\n      console.log(JSON.stringify(data));\n    }\n````  \n error - will be called if there are any errors in exporting or selecting the songs\n````\n    function error(e)\n    {\n      console.log(e);\n    }\n````  \n**multiple** - a boolean variable which allows you the disable multiple songs selection from the user. You can either pass ``true`` or ``false``\n \n**icloud** - a boolean variable if sets ``true`` will show the iCloud songs otherwise not.\n\n**title** - A String value to set the title of the picker (only works in iOS).\n````\n    var multiple = true; // Will allow user to select multiple songs.\n    or\n    var multiple = false; // Will allow user to select only one song.\n    \n    var icloud = true; // Will show iCloud songs.\n    or\n    var icloud =  false; // Will only show songs available locally on device.\n````\n\n- **To delete the song**\n\n````\nwindow.plugins.mediapicker.deleteSongs(success,error,multiple,src);\n````\n\n\n multiple - To delete multiple files or single file. You can either pass ``true`` or ``false``.\n````\n    var multiple = true; // Will delete multiple songs.\n    or\n    var multiple = false; // Will delete only one song.\n````\n  \n  src - It depends on the value of option. If the option is true, then the src will be an array containing full path to file. Otherwise a string will single full path. The full path should not contain file://localhost or any encoded string like Value%20Space. It should start like this /var/mobile/....../file name.m4a. See demo for more information.\n\n\n# Other Note\n\nThe old original version of the plugin is located here https://github.com/an-rahulpandey/ios-audio-picker. In this version we have added the Android Support (thanks to [@kukukk](https://github.com/kukukk)). Please test it and repot the issues. If possible please send a pull request for the fixes. Thanks for your support.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/an-rahulpandey/cordova-plugin-mediapicker.git"
+  },
+  "version": "1.0.2"
+}

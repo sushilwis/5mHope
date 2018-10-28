@@ -1,0 +1,51 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-nativeaudio": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-iosaudiopicker": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-mediapicker": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.eos.fivemhope"
+    }
+  },
+  "dependent_plugins": {}
+}

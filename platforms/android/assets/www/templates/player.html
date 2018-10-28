@@ -1,0 +1,53 @@
+<ion-modal-view style="background:#E7E7E8">
+  <!--<ion-header-bar class="bar-assertive">
+      <h1 class="title">Player</h1>
+      <div class="buttons">
+          <button class="button button-clear" ng-click="hidePlayer()">Hide</button>
+      </div>
+  </ion-header-bar>-->
+  <div id="header123">
+    Prayer Time
+  </div>
+
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item">
+        <h2><i class="icon ion-ios-musical-notes"></i> {{name || '--'}}</h2>
+        <p>{{path || '--'}}</p>
+      </div>
+      <div class="item item-body">
+        <div ng-hide="loaded">
+          <label>Please select a Media file to play</label>
+        </div>
+
+        <div ng-show="loaded" style="height: 30px; width: {{position}}%; transition: width 0.2s; background: #e42012;">
+        </div>
+      </div>
+
+      <!--<div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="javascript:" ng-click="resumeAudio()" ng-hide="isPlaying || !loaded">
+          <i class="icon ion-ios-play"></i> Play
+        </a>
+        <a class="tab-item" href="javascript:" ng-click="pauseAudio()" ng-show="isPlaying">
+          <i class="icon ion-pause"></i> Pause
+        </a>
+        <a class="tab-item" href="javascript:" ng-click="stopAudio()" ng-show="isPlaying">
+          <i class="icon ion-stop"></i> Stop
+        </a>
+      </div>-->
+    </div>
+    <p align="center">
+      {{prayername}}
+    </p>
+    <p align="center">
+      {{prayer}}
+    </p>
+  </ion-content>
+
+  <div id="footer1234">
+    <button style="width:40%;background:#606163;color:white;font-size:20px;padding:10px;border:1px solid #606163" ng-click="resumeAudio()" ng-hide="isPlaying || !loaded"><i class="icon ion-ios-play" style="font-size:20px"></i> Play</button>
+    <button style="width:40%;background:#606163;color:white;font-size:20px;padding:10px;border:1px solid #606163" ng-click="pauseAudio()" ng-show="isPlaying"><i class="icon ion-pause" style="font-size:20px"></i> Pause</button>
+    <button style="width:40%;background:#606163;color:white;font-size:20px;padding:10px;border:1px solid #606163" ng-click="stopAudio()" ng-show="isPlaying"><i class="icon ion-ios-play" style="font-size:20px"></i> Stop</button>
+  </div>
+
+</ion-modal-view>
