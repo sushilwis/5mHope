@@ -449,7 +449,7 @@ angular.module('5mHope.controllers', [])
     alert(playListSongs);
 
     if (playListSongs) {
-      alert("here");
+      alert("here1");
       $scope.items = [];
       $scope.items = JSON.parse(localStorage.getItem("playlist"));
       $state.go('app.musicsettings');
@@ -2177,8 +2177,8 @@ angular.module('5mHope.controllers', [])
   })
 
   .controller('NotificationsCtrl', function ($scope, $stateParams, $http, APP_CONSTANTS, $ionicPopup, $state) {
-    $scope.notifications = [];
 
+    $scope.notifications = [];
     $scope.groupName = {};
     $scope.sentName = {};
 
@@ -2310,34 +2310,40 @@ angular.module('5mHope.controllers', [])
     };
   })
 
-  .controller('PlaylistsCtrl', function ($scope) {
-    $scope.playlists = [{
-        title: 'Reggae',
-        id: 1
-      },
-      {
-        title: 'Chill',
-        id: 2
-      },
-      {
-        title: 'Dubstep',
-        id: 3
-      },
-      {
-        title: 'Indie',
-        id: 4
-      },
-      {
-        title: 'Rap',
-        id: 5
-      },
-      {
-        title: 'Cowbell',
-        id: 6
-      }
-    ];
-  })
+  .controller('PlaylistsCtrl', function ($scope, $state) {
+  //   $scope.playlists = [{
+  //       title: 'Reggae',
+  //       id: 1
+  //     },
+  //     {
+  //       title: 'Chill',
+  //       id: 2
+  //     },
+  //     {
+  //       title: 'Dubstep',
+  //       id: 3
+  //     },
+  //     {
+  //       title: 'Indie',
+  //       id: 4
+  //     },
+  //     {
+  //       title: 'Rap',
+  //       id: 5
+  //     },
+  //     {
+  //       title: 'Cowbell',
+  //       id: 6
+  //     }
+  //   ];
 
+  $scope.playlists = [];
+
+  if($scope.playlists == null || $scope.playlists == ""){
+    $state.go("app.browse");
+  }
+
+  })
   .controller('PlaylistCtrl', function ($scope, $stateParams) {});
 
 //.controller('UserDetailsCtrl', function($scope, $stateParams, $http, APP_CONSTANTS,$ionicPopup,$state) {
