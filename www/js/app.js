@@ -410,12 +410,12 @@ angular.module('5mHope', ['ionic', '5mHope.controllers', 'ion-floating-menu', '5
           // console.log(localStorage.getItem("id"));
     if (localStorage.getItem("id") != null && localStorage.getItem("id") != "") {
           // console.log('from if : ', localStorage.getItem("id"));
-          console.log('from if : ', localStorage.getItem("role"));
+          // console.log('from if : ', localStorage.getItem("role"));
       if (localStorage.getItem("role") == "user") {
-        console.log('from if : ', localStorage.getItem("role"));
+        // console.log('from if : ', localStorage.getItem("role"));
         $urlRouterProvider.otherwise('/app/home');
       } else if (localStorage.getItem("role") == "leader") {
-        console.log('from if : ', localStorage.getItem("role"));
+        // console.log('from if : ', localStorage.getItem("role"));
         $urlRouterProvider.otherwise('/app/homeleader');
       } else {
         $urlRouterProvider.otherwise('/login');

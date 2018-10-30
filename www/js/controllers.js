@@ -446,7 +446,7 @@ angular.module('5mHope.controllers', [])
       $scope.modal.show();
     };
 
-    alert(playListSongs);
+    alert('Playlist value : ',playListSongs);
 
     if (playListSongs) {
       alert("Song exist block");
@@ -2337,7 +2337,7 @@ angular.module('5mHope.controllers', [])
       }
     ];
 
-  $scope.playlists = [];
+  // $scope.playlists = [];
 
   if($scope.playlists == null || $scope.playlists == ""){
     $state.go("app.browse");
@@ -2349,7 +2349,9 @@ angular.module('5mHope.controllers', [])
   }
 
   })
-  .controller('PlaylistCtrl', function ($scope, $stateParams) {});
+  .controller('PlaylistCtrl', function ($scope, $stateParams) {
+    $scope.player();
+  });
 
 //.controller('UserDetailsCtrl', function($scope, $stateParams, $http, APP_CONSTANTS,$ionicPopup,$state) {
 //
