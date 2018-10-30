@@ -4,6 +4,11 @@
   </ion-nav-title>
   <ion-content>
     <ion-list>
+      <ion-item ng-repeat="item in items track by $index">
+        &nbsp;&nbsp;&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;&nbsp;
+      </ion-item>
+    </ion-list>
+    <ion-list>
       <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
         {{playlist.title}}
       </ion-item>

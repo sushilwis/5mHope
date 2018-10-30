@@ -2341,6 +2341,11 @@ angular.module('5mHope.controllers', [])
 
   if($scope.playlists == null || $scope.playlists == ""){
     $state.go("app.browse");
+  }else {
+    $scope.items = [];
+    if (localStorage.getItem("playlist") !== null && localStorage.getItem("playlist") !== "") {
+      $scope.items = JSON.parse(localStorage.getItem("playlist"));
+    }
   }
 
   })
