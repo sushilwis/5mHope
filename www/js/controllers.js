@@ -449,12 +449,12 @@ angular.module('5mHope.controllers', [])
     alert(playListSongs);
 
     if (playListSongs) {
-      alert("here1");
+      alert("Song exist block");
       $scope.items = [];
       $scope.items = JSON.parse(localStorage.getItem("playlist"));
       $state.go('app.musicsettings');
     } else {
-      alert("here2");
+      alert("Song Non exist block");
       $ionicPlatform.ready(function () {
 
 
@@ -2311,41 +2311,41 @@ angular.module('5mHope.controllers', [])
   })
 
   .controller('PlaylistsCtrl', function ($scope, $state) {
-  //   $scope.playlists = [{
-  //       title: 'Reggae',
-  //       id: 1
-  //     },
-  //     {
-  //       title: 'Chill',
-  //       id: 2
-  //     },
-  //     {
-  //       title: 'Dubstep',
-  //       id: 3
-  //     },
-  //     {
-  //       title: 'Indie',
-  //       id: 4
-  //     },
-  //     {
-  //       title: 'Rap',
-  //       id: 5
-  //     },
-  //     {
-  //       title: 'Cowbell',
-  //       id: 6
-  //     }
-  //   ];
+    $scope.playlists = [{
+        title: 'Reggae',
+        id: 1
+      },
+      {
+        title: 'Chill',
+        id: 2
+      },
+      {
+        title: 'Dubstep',
+        id: 3
+      },
+      {
+        title: 'Indie',
+        id: 4
+      },
+      {
+        title: 'Rap',
+        id: 5
+      },
+      {
+        title: 'Cowbell',
+        id: 6
+      }
+    ];
 
   $scope.playlists = [];
 
   if($scope.playlists == null || $scope.playlists == ""){
     $state.go("app.browse");
   }else {
-    $scope.items = [];
-    if (localStorage.getItem("playlist") !== null && localStorage.getItem("playlist") !== "") {
-      $scope.items = JSON.parse(localStorage.getItem("playlist"));
-    }
+    // $scope.items = [];
+    // if (localStorage.getItem("playlist") !== null && localStorage.getItem("playlist") !== "") {
+    //   $scope.items = JSON.parse(localStorage.getItem("playlist"));
+    // }
   }
 
   })
