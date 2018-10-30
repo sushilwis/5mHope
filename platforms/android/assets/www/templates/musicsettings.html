@@ -1,15 +1,19 @@
-<ion-view view-title="Music Settings" >
+<ion-view>
   <ion-nav-title style="color:white;">
     Music Settings
   </ion-nav-title>
-  <ion-content >
-    <div style="background:#fafafa;padding:10px">PlayList </div>
 
-        <ion-list>
-  		  <ion-item ng-repeat="item in items track by $index">
-          &nbsp;&nbsp;&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;&nbsp;
-        </ion-item>
-        </ion-list>
+  <ion-content>
+    <ion-item ng-click="goto('playlists')">
+      <i class="fa fa-list pull-left" style="margin-top:4px;margin-left:10px"></i>&nbsp;&nbsp;&nbsp;&nbsp;PlayList
+      <i class="fa fa-angle-right pull-right"></i>
+    </ion-item>
+    <!-- <div style="background:#fafafa;padding:10px">PlayList </div> -->
 
+    <ion-list>
+      <ion-item ng-repeat="item in items track by $index">
+        &nbsp;&nbsp;&nbsp;&nbsp;{{item}}&nbsp;&nbsp;&nbsp;&nbsp;
+      </ion-item>
+    </ion-list>
   </ion-content>
-</ion-view>
+  </ion-viewMusic>

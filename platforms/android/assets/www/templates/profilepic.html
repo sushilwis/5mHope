@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
 <ion-view view-title="Profile Pic" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <ion-nav-title style="color:white;">
     Profile Pic
   </ion-nav-title>
@@ -18,7 +14,7 @@
       <table id="wrapper">
         <tr>
           <td><img  ng-show="imgURI == undefined" src="img/userprofile.png" id="myImage" alt="" /></td>
-          <td><img  class="Centered" ng-show="imgURI !== undefined" ng-model="imgURI" ng-src= "{{imgURI}}" style="width:200px;height:200px;border-radius:8px;"></td>
+          <td><img  class="Centered" ng-show="imgURI !== undefined" ng-model="imgURI" ng-src= "{{imgURI}}" style="border-radius:50%;"></td>
         </tr>
       </table>
 
@@ -29,7 +25,7 @@
       <form action="/action_page.php" >
 
         <div class="col-xs-6">
-          <input type="button" class="form-control sub text-default" id="pwd" value="Cancel" ng-click="canceUpdatel()">
+          <input type="button" class="form-control sub text-default" id="pwd" value="Cancel" ng-click="cancelPic()">
         </div>
         <div class="col-xs-6">
           <input type="button" class="form-control sub text-default" id="pwd2" value="Change Pic" ng-click="triggerActionSheet()">
@@ -39,5 +35,4 @@
 
   </ion-content>
 </ion-view>
-</body>
-</html>
+

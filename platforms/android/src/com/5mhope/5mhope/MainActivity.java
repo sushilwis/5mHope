@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.eos.fivemhope;
+package com.5mhope.5mhope;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

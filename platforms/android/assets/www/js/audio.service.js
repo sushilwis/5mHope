@@ -2,6 +2,8 @@ angular.module('5mHope.services', [])
 
 .service('AudioSvc', [function() {
 
+                      
+                      
   var AudioSvc = {
     my_media: null,
     mediaTimer: null,
@@ -16,6 +18,8 @@ angular.module('5mHope.services', [])
 
 
       if (self.mediaTimer == null) {
+                      
+     //alert(self.mediaTimer);
         self.mediaTimer = setInterval(function() {
           self.my_media.getCurrentPosition(
             function(position) {
@@ -72,6 +76,7 @@ angular.module('5mHope.services', [])
         self.my_media.stop();
       }
       if (self.mediaTimer) {
+                      console.log("Media Timer:" + self.mediaTimer)
         clearInterval(self.mediaTimer);
                       console.log("interval=" + self.mediaTimer);
 
